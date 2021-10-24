@@ -18,3 +18,11 @@ wierzchołka o najniższym numerze spośród dotychczas nieodwiedzonych.
 - Sprawdzaniu czy kolejne wierzchołki grafu są odwiedzone było odwrócone.
 
 2: Uzupełniona dokumentacja w kodzie wraz z javadoc w folderze lab-2-task w pliku lab-2-task.zip.
+
+## Laboratoria 3
+### Zadanie
+Zadaniem było rozwiązania problemu budowania oprogramowania przy pomocy narzędzia 
+Ant, Maven oraz wykorzystanie GitHub Actions do utworzenia ciągłej integracji projektu
+utworzonego przy pomocy Maven.
+
+Pliki budujące Ant i Maven build.xml i pom.xml oraz zdjęcie pokazujące sukces akcji GitHub znajdują się w folderze 03-CI
