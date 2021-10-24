@@ -6,7 +6,7 @@ Zadania z laboratoriów są pod swoimi folderami:
 
 ## Laboratoria 2
 ### Zadanie
-zadaniem było:
+Zadaniem było:
 1. Odnalezienie oraz poprawienie posianych błędów w programie
 przeszukującym wszerz podany graf. Przeszukiwanie zaczyna się od
 wierzchołka o najniższym numerze spośród dotychczas nieodwiedzonych.
@@ -25,4 +25,6 @@ Zadaniem było rozwiązania problemu budowania oprogramowania przy pomocy narzę
 Ant, Maven oraz wykorzystanie GitHub Actions do utworzenia ciągłej integracji projektu
 utworzonego przy pomocy Maven.
 
-Pliki budujące Ant i Maven build.xml i pom.xml oraz zdjęcie pokazujące sukces akcji GitHub znajdują się w folderze 03-CI
+![Basic CI Workflow](https://github.com/Mimikkk/io-2021/actions/workflows/maven-publish.yml/badge.svg)
+
+Pliki build.xml oraz pom.xml wraz z obrazem dotyczącym udanej konfiguracji GitHub Action jest dostępne w folderze 03-CI 
