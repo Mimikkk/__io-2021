@@ -13,6 +13,9 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/lab-2-task/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/lab-2-task/.target" />
+      <excludeFolder url="file://$MODULE_DIR$/03-CI/Ant/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/03-CI/Maven/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/03-CI/Maven/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

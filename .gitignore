@@ -1,4 +1,6 @@
 /.idea
 /.target
-/*/.idea
-/*/.target
+/**/.idea
+/**/.target
+/**/target
+/03-CI/Ant/.idea/

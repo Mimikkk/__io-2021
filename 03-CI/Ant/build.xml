@@ -1,0 +1,92 @@
+﻿<project name="bank-zbozowy" default="compile">
+    <target name="run" depends="dist">
+        <echo message="Uruchamianie projektu ${ant.project.name}."/>
+
+        <echo message="W ramach tego celu:"/>
+        <echo message="* uruchom klase put.io.selenium.atm.SimpleServer"/>
+        <java classname="put.io.selenium.atm.SimpleServer" classpathref="dist.cp"/>
+        <echo message="  znajdujaca sie w pliku bank.jar, "/>
+        <echo message="  pamietajac o podaniu sciezki do wymaganych bibliotek"/>
+
+        <echo message="Ten cel zalezy od:"/>
+        <echo message="* przygotowania pliku jar"/>
+    </target>
+
+    <target name="dist" depends="compile,copy,init">
+        <echo message="Przygotowanie pliku jar do dystrybucji projektu ${ant.project.name}."/>
+
+        <echo message="W ramach tego celu:"/>
+        <echo message="* utworz plik bank.jar w folderze dist na podstawie kodu binarnego z folderu bin"/>
+        <jar destfile="dist/bank.jar">
+            <fileset dir="bin"/>
+        </jar>
+
+        <echo message="Ten cel zalezy od:"/>
+        <echo message="* kompilacji projektu (kod musi byc skompilowany)"/>
+        <echo message="* kopiowania zawartosci statycznej projektu (pliki statyczne musza znajdowac sie w bin)"/>
+        <echo message="* inicjalizacji projektu (musi istniec folder dist)"/>
+    </target>
+
+    <target name="compile" depends="init">
+        <echo message="Kompilacja kodu projektu ${ant.project.name}."/>
+
+        <echo message="W ramach tego celu:"/>
+        <echo message="* skompiluj kod zrodlowy projektu (znajdujacy sie w folderze src) do folderu bin"/>
+        <javac srcdir="src" destdir="bin" classpathref="lib.cp" includeantruntime="false" encoding="utf-8"/>
+
+        <echo message="Ten cel zalezy od:"/>
+        <echo message="* inicjalizacji projektu"/>
+    </target>
+    <target name="copy" depends="init">
+        <echo message="Kopiowanie zawartosci statycznej projektu ${ant.project.name}."/>
+
+        <echo message="W ramach tego celu:"/>
+        <echo message="* skopiuj zawartosc folderu res do folderu bin"/>
+        <copy todir="bin">
+            <fileset dir="res"/>
+        </copy>
+
+        <echo message="Ten cel zalezy od:"/>
+        <echo message="* inicjalizacji projektu"/>
+    </target>
+    <target name="init">
+        <echo message="Inicjalizacja projektu ${ant.project.name}."/>
+
+        <echo message="W ramach tego celu:"/>
+        <echo message="* utworz folder bin"/>
+        <mkdir dir="bin"/>
+        <echo message="* utworz folder dist"/>
+        <mkdir dir="dist"/>
+    </target>
+
+    <target name="clean">
+        <echo message="Usuwanie plikow binarnych projektu ${ant.project.name}."/>
+
+        <echo message="W ramach tego celu:"/>
+        <echo message="* usun folder bin"/>
+        <delete dir="bin"/>
+    </target>
+    <target name="clean-all" depends="clean">
+        <echo message="Usuwanie wszystkich plików wykonywalnych projektu ${ant.project.name}."/>
+
+        <echo message="W ramach tego celu:"/>
+        <echo message="* usun folder dist"/>
+        <delete dir="dist"/>
+
+        <echo message="Ten cel zalezy od:"/>
+        <echo message="* usuwania plikow binarnych projektu"/>
+    </target>
+
+    <path id="jetty.cp">
+        <fileset dir="../Jetty"/>
+    </path>
+    <path id="lib.cp">
+        <pathelement location="lib/freemarker.jar"/>
+        <pathelement location="lib/servlet-api-2.5.jar"/>
+        <path refid="jetty.cp"/>
+    </path>
+    <path id="dist.cp">
+        <path refid="lib.cp"/>
+        <pathelement location="dist/bank.jar"/>
+    </path>
+</project>
