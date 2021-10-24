@@ -15,4 +15,4 @@ jobs:
           distribution: 'adopt'
           cache: maven
       - name: Validate, build and run tests
-        run: mvn --batch-mode --update-snapshots verify
+        run: mvn -f 03-CI/Maven/pom.xml --batch-mode --update-snapshots verify
