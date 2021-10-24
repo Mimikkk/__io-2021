@@ -6,7 +6,7 @@ Zadania z laboratoriów są pod swoimi folderami:
 
 ## Laboratoria 2
 ### Zadanie
-zadaniem było:
+Zadaniem było:
 1. Odnalezienie oraz poprawienie posianych błędów w programie
 przeszukującym wszerz podany graf. Przeszukiwanie zaczyna się od
 wierzchołka o najniższym numerze spośród dotychczas nieodwiedzonych.
@@ -18,3 +18,12 @@ wierzchołka o najniższym numerze spośród dotychczas nieodwiedzonych.
 - Sprawdzaniu czy kolejne wierzchołki grafu są odwiedzone było odwrócone.
 
 2: Uzupełniona dokumentacja w kodzie wraz z javadoc w folderze lab-2-task w pliku lab-2-task.zip.
+
+## Laboratiora 3
+Zadaniem było:
+1. Zapoznanie się z narzędziem budowania Ant
+2. Zapoznanie się z narzędziem budowania Maven
+3. Zapoznanie się z technologią GitHub Actions
+![Basic CI Workflow](https://github.com/Mimikkk/io-2021/actions/workflows/maven-publish.yml/badge.svg)
+
+Pliki build.xml oraz pom.xml wraz z obrazem dotyczącym udanej konfiguracji GitHub Action jest dostępne w folderze 03-CI 
