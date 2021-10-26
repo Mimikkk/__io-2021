@@ -12,7 +12,7 @@ przeszukującym wszerz podany graf. Przeszukiwanie zaczyna się od
 wierzchołka o najniższym numerze spośród dotychczas nieodwiedzonych.
 2. Uporządkowanie, uzupełnienie i wygenerowanie dokumentacji do projektu.
 
-dodo
+radical dodo.
 
 1: Odnalezione i poprawione błędy:
 - błędne odczytywanie plików wejściowych.
