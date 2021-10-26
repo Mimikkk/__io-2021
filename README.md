@@ -17,7 +17,7 @@ wierzchołka o najniższym numerze spośród dotychczas nieodwiedzonych.
 - kolejkowanie w procesorze BFS.
 - Sprawdzaniu czy kolejne wierzchołki grafu są odwiedzone było odwrócone.
 
-2: Uzupełniona dokumentacja w kodzie wraz z javadoc w folderze lab-2-task w pliku lab-2-task.zip.
+2: Uzupełniona dokumentacja w kodzie wraz z javadoc w folderze 02-Debugging w pliku lab-2-task.zip.
 
 ## Laboratoria 3
 ### Zadanie
