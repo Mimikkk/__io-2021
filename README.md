@@ -2,8 +2,8 @@
 Inżynieria oprogramowania 2021-2022
 
 Zadania z laboratoriów są pod swoimi folderami:
-- Zadanie z Laboratorium 2: /lab-2-task
-
+- Zadanie z Laboratorium 2: /02-Debugging
+- Zadanie z Laboratorium 3: /03-CI
 ## Laboratoria 2
 ### Zadanie
 Zadaniem było:
