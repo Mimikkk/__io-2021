@@ -7,8 +7,6 @@ public class Program {
         System.out.println("Not so rad...");
     }
 
-
-
     private static howRad() {
         System.out.println("Not so rad...");
     }
