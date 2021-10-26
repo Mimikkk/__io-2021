@@ -1,5 +1,9 @@
 public class Program {
-    public static void main(String[] args) {
+    private static sayHello() {
         System.out.println("How Fun!");
+    }
+
+    public static void main(String[] args) {
+        sayHello();
     }
 }
