@@ -6,14 +6,20 @@ public class Program {
     private static howNotRad() {
         System.out.println("Not so rad...");
     }
-    
+
+
+
     private static howRad() {
         System.out.println("Not so rad...");
     }
+
+
 
     public static void main(String[] args) {
         sayHello();
         howRad();
         howNotRad();
     }
+
+
 }
