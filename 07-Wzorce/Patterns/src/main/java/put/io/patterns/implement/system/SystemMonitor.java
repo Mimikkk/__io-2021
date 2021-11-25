@@ -24,7 +24,8 @@ public class SystemMonitor {
   }
 
   public void probe() {
-    Try.run(this::updateState).andThen(this::notifyObservers);
+    updateState();
+    notifyObservers();
   }
 
   private void updateState() {
