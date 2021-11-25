@@ -1,17 +1,35 @@
 package put.io.patterns.implement;
 
 import io.vavr.control.Try;
-import org.jetbrains.annotations.NotNull;
+import put.io.patterns.implement.system.*;
+import put.io.patterns.implement.system.observers.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static java.util.Arrays.*;
+import static put.io.patterns.implement.utils.LoopRunner.*;
 
 public class MonitorRunner {
-  static void main(String[] args) {
-    watch(new SystemMonitor());
+  private static final SystemMonitor monitor = new SystemMonitor();
+
+  static void main(String[] ignored) {
+    initializeObservers();
+    loop(MonitorRunner::watch);
   }
 
-  private static void watch(@NotNull SystemMonitor monitor) {
-    while (true) {
-      monitor.probe();
-      Try.run(() -> Thread.sleep(5000)).onFailure(Throwable::printStackTrace);
-    }
+  private static void initializeObservers() {
+    monitor.addSystemStateObserver(asList(
+        new SystemInfoObserver(),
+        new SystemGarbageCollectorObserver(),
+        new SystemCoolerObserver(),
+        new UsbDeviceObserver()
+    ));
+  }
+
+  private static void watch() {
+    monitor.probe();
+    Try.run(() -> Thread.sleep(5000)).onFailure(Throwable::printStackTrace);
   }
 }
