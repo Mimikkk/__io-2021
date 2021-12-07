@@ -31,15 +31,15 @@ class AudiobookPriceCalculatorTest {
 
   @Test
   void test_it_should_handle_silver_customer() {
-    var standardSubscriber = new Customer("mockCustomer", Customer.LoyaltyLevel.SILVER, false);
+    var silverSubscriber = new Customer("mockCustomer", Customer.LoyaltyLevel.SILVER, false);
 
-    assertEquals(calculator.calculate(standardSubscriber, audiobook), price * 0.9);
+    assertEquals(calculator.calculate(silverSubscriber, audiobook), price * 0.9);
   }
 
   @Test
   void test_it_should_handle_gold_customer() {
-    var standardSubscriber = new Customer("mockCustomer", Customer.LoyaltyLevel.GOLD, false);
+    var goldSubscriber = new Customer("mockCustomer", Customer.LoyaltyLevel.GOLD, false);
 
-    assertEquals(calculator.calculate(standardSubscriber, audiobook), price * 0.8);
+    assertEquals(calculator.calculate(goldSubscriber, audiobook), price * 0.8);
   }
 }
