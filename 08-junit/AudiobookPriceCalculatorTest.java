@@ -9,8 +9,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AudiobookPriceCalculatorTest {
   private static final AudiobookPriceCalculator calculator = new AudiobookPriceCalculator();
-  private static final double audiobookPrice = 100.0;
-  private static final Audiobook audiobook = new Audiobook("mockAudiobook", audiobookPrice);
+  private static final double price = 100.0;
+  private static final Audiobook audiobook = new Audiobook("mockAudiobook", price);
 
   @Test
   void test_it_should_handle_any_subscriber() {
@@ -26,20 +26,20 @@ class AudiobookPriceCalculatorTest {
   void test_it_should_handle_standard_customer() {
     var standardCustomer = new Customer("mockCustomer", Customer.LoyaltyLevel.STANDARD, false);
 
-    assertEquals(calculator.calculate(standardCustomer, audiobook), audiobookPrice);
+    assertEquals(calculator.calculate(standardCustomer, audiobook), price);
   }
 
   @Test
   void test_it_should_handle_silver_customer() {
     var standardSubscriber = new Customer("mockCustomer", Customer.LoyaltyLevel.SILVER, false);
 
-    assertEquals(calculator.calculate(standardSubscriber, audiobook), audiobookPrice * 0.9);
+    assertEquals(calculator.calculate(standardSubscriber, audiobook), price * 0.9);
   }
 
   @Test
   void test_it_should_handle_gold_customer() {
     var standardSubscriber = new Customer("mockCustomer", Customer.LoyaltyLevel.GOLD, false);
 
-    assertEquals(calculator.calculate(standardSubscriber, audiobook), audiobookPrice * 0.8);
+    assertEquals(calculator.calculate(standardSubscriber, audiobook), price * 0.8);
   }
 }
