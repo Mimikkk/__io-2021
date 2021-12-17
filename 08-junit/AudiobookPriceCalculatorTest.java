@@ -19,7 +19,6 @@ class AudiobookPriceCalculatorTest {
     var goldSubscriber = new Customer("mockCustomer", Customer.LoyaltyLevel.GOLD, true);
     var customers = List.of(standardSubscriber, silverSubscriber, goldSubscriber);
 
-
     customers.forEach(customer -> assertEquals(calculator.calculate(customer, audiobook), 0));
   }
 
