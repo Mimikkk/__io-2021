@@ -10,13 +10,13 @@ import java.util.concurrent.Semaphore;
  */
 public class CardPrinterAPI {
 
-  private static final int NUMBER_OF_PRINTERS = 10;
+  private static final int NUMBER_OF_PRINTERS = 50;
 
   public static final CardPrinterAPI Instance = new CardPrinterAPI();
 
-  private Logger logger;
+  private final Logger logger;
 
-  private Semaphore printers_pool;
+  private final Semaphore printers_pool;
 
   private CardPrinterAPI() {
     printers_pool = new Semaphore(NUMBER_OF_PRINTERS);

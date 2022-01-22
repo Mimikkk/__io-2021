@@ -15,17 +15,14 @@ import pl.put.cb.print.CardPrinterAPI;
 @RequestMapping("/print_card")
 public class PrintCardController {
 
-    private static final Logger logger = LoggerFactory.getLogger(PrintCardController.class);
-
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
     public String get(@RequestParam(value="id") Integer id) {
-
-        Customer customer = CustomersDAO.Instance.ReadById(id);
+        Customer customer = CustomersDAO.ReadById(id);
         if (customer == null) return "No such customer...";
 
         CardPrinterAPI.Instance.printCard(customer.toString());
 
-        return "Printed: " + customer;
+        return "Printed: " + customer.Id();
     }
 
 }

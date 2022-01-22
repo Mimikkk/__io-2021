@@ -17,11 +17,10 @@ public class CustomersDAO {
   public static Collection<Customer> ReadAll() {
     return unmodifiableMap(customers).values();
   }
-  public Customer ReadById(int id) {
+  public static Customer ReadById(int id) {
     return customers.getOrDefault(id, null);
   }
 
-  public static final CustomersDAO Instance = new CustomersDAO();
   private static final Logger Logger = LoggerFactory.getLogger(CustomersDAO.class);
   private static final Map<Integer, Customer> customers = new HashMap<>();
   static {

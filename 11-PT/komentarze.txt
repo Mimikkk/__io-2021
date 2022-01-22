@@ -1,0 +1,16 @@
+Zad 1:
+ Przed usprawnieniami:
+  Średni czas odpowiedzi     : 6845ms z odchyleniem 966.71ms
+  Przepustowość              : 1.3/sec
+ Usprawnienia:
+  - Zastosowanie zapamiętywania ostatnich obliczeń.
+  - Zastosowanie zapamiętywania ostatniej aktualizacji bazy.
+  - Usprawnienie matematyki odpowiedzialnej za obliczanie.
+  - Zamiana logiki logującej.
+ Po usprawnieniach:
+  Średni czas odpowiedzi     : 4ms z odchyleniem 13.42ms
+  Przepustowość              : 46.0/sec
+
+Zad 2:
+  Przepustowość  : 2.0/sec
+  Należy kupić   : ~50 drukarek, wtedy osiągamy przepustowość 5.8/sec
